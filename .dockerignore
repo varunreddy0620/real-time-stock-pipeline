@@ -1,0 +1,14 @@
+.venv
+.venv-*
+.git
+.github
+.idea
+.vscode
+__pycache__
+*.pyc
+.pytest_cache
+.coverage
+htmlcov
+site
+.env
+_to_delete

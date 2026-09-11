@@ -1,0 +1,11 @@
+name: market_dbt
+version: "1.0.0"
+config-version: 2
+profile: market_dbt
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  market_dbt:
+    +materialized: table

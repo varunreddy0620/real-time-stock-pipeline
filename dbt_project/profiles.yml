@@ -1,0 +1,12 @@
+market_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+      user: "{{ env_var('POSTGRES_USER', 'pipeline') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'pipeline') }}"
+      port: "{{ env_var('POSTGRES_PORT', '5432') | int }}"
+      dbname: "{{ env_var('POSTGRES_DB', 'market') }}"
+      schema: analytics
+      threads: 2

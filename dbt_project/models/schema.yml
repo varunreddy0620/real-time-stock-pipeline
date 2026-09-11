@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: raw_ohlcv
+        columns:
+          - name: ticker
+            data_tests: [not_null]
+          - name: timestamp
+            data_tests: [not_null]
+          - name: close
+            data_tests: [not_null]
+
+models:
+  - name: daily_ohlcv
+    columns:
+      - name: ticker
+        data_tests: [not_null]
+      - name: trade_date
+        data_tests: [not_null]
+  - name: weekly_trends
+    columns:
+      - name: ticker
+        data_tests: [not_null]

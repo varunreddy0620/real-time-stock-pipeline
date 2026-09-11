@@ -1,0 +1,59 @@
+site_name: Pulse Pipeline
+site_description: Educational real-time stock market data pipeline — the flagship course lab.
+site_url: https://example.com/pulse-pipeline
+repo_url: https://github.com/your-org/real-time-stock-pipeline
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Complete Project Flow: confluence-project-flow.md
+  - Setup: setup.md
+  - Local datasets: local-datasets.md
+  - WorkForge handoff: workforge-handoff.md
+  - 17 Tasks: tasks.md
+  - API: api.md
+  - Deployment: deployment.md
+  - Troubleshooting: troubleshooting.md
